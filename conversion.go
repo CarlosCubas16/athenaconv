@@ -26,6 +26,8 @@ func castAthenaRowData(ctx context.Context, rowData types.Datum, athenaType stri
 		castedData = data
 	case "integer":
 		castedData, err = strconv.Atoi(data)
+	case "smallint":
+		castedData, err = strconv.Atoi(data)
 	case "bigint":
 		castedData, err = strconv.ParseInt(data, 10, 64)
 	case "array":
